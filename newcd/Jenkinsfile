@@ -4,7 +4,7 @@ pipeline {
         stage('Build on k8 ') {
             steps {           
                         sh 'pwd'
-                        sh 'cp -R helm/* .'
+                        sh 'cp -R newcd/helm/* .'
 		        sh 'ls -ltr'
                         sh 'pwd'
                         sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic  --set image.repository=hub.docker.com/layers/ganeshgaikwad2993/petclinic --set image.tag=5'
